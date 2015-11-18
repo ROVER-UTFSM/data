@@ -23,5 +23,5 @@ if __name__ == "__main__":
 	GPIO.add_event_detect(pin, GPIO.FALLING, callback=actualizar)	# add bounce time ?
 
 	while(True):
-		time.sleep(0.1)
-		my_time = time.time()
+		time.sleep(1)
+		print("Estao del pin : " + str(GPIO.input(pin)))
