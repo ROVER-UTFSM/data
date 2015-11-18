@@ -6,14 +6,13 @@ import time
 
 
 pin = 12
+estado = 0
+time0  = 0
 
 def actualizar(pinx):
-	time0 = time.time()
-
-	GPIO.wait_for_edge(pinx, GPIO.RISING)
-
-	deltaT = time.time() - time0
-	print("DTime = " + str(deltaT))
+	time1 = time.time() - time0
+	print("DTime = " + str(time1))
+	time0 = time1
 
 if __name__ == "__main__":
 	GPIO.setmode(GPIO.BOARD)
