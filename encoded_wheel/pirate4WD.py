@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-pin = 40
+pin = 12
 
 def actualizar(pinx):
 	print("Adentro")
