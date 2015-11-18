@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-pin = 12
+pin = 40
 
 def actualizar(pinx):
 	time0 = time.time()
@@ -21,6 +21,4 @@ if __name__ == "__main__":
 	GPIO.setup(pin, GPIO.IN)	#pull_up_down=GPIO.PUD_DOWN
 	GPIO.add_event_detect(pin, GPIO.FALLING, callback=actualizar)	# add bounce time ?
 
-	while(True):
-		time.sleep(1)
-		print("Estao del pin : " + str(GPIO.input(pin)))
+	raw_input("")
