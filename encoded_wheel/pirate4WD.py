@@ -6,12 +6,11 @@ import time
 
 
 pin = 12
-estado = 0
 time0  = 0
 
 def actualizar(pinx):
-	time1 = time.time() - time0
-	print("DTime = " + str(time1))
+	time1 = time.time()
+	print("DTime = " + str(time1-time0))
 	time0 = time1
 
 if __name__ == "__main__":
