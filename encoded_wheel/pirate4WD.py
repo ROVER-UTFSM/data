@@ -10,7 +10,7 @@ pin = 12
 def actualizar(pinx):
 	time0 = time.time()
 
-	#GPIO.wait_for_edge(pinx, gpio.RISING)
+	GPIO.wait_for_edge(pinx, gpio.RISING)
 
 	deltaT = time.time() - time0
 	print("DTime = " + str(deltaT))
