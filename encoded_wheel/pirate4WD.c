@@ -10,7 +10,7 @@ void count(void){
 
 int main(){
 	wiringPiSetup();
-	wiringPiISR(1, INT_EDGE_FALLING, &count);
+	wiringPiISR(1, INT_EDGE_BOTH, &count);
 
 	while(1);
 
